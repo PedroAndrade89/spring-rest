@@ -8,7 +8,7 @@ import java.util.concurrent.atomic.AtomicLong;
 @RestController
 public class GreetingController {
 
-    private static final String resp ="Hello world";
+    private static final String resp ="Hello world 1";
     private final AtomicLong counter= new AtomicLong();
 
     @RequestMapping(value="/greeting", method= RequestMethod.GET)
