@@ -14,7 +14,7 @@
         state: stopped
 
     - copy:
-        src: ${WORKSPACE}/target/gs-rest-service-1.0.jar
+        src: /target/gs-rest-service-1.0.jar
         dest: /opt/gs-rest-service/current/gs-rest-service-1.0.jar
         mode: '0700'
 
