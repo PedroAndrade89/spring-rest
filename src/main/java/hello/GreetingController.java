@@ -13,6 +13,7 @@ public class GreetingController {
 
     @RequestMapping(value="/greeting", method= RequestMethod.GET)
     public Greeting greeting(){
+
         return new Greeting(counter.incrementAndGet(),resp);
     }
 
