@@ -1,7 +1,0 @@
-APP_ROOT=/opt/gs-rest-service/current
-BINARY="gs-rest-service-1.0.jar"
-PORT="8090"
-USER="root"
-JAVA_OPTS="-Xmx256m"
-
-

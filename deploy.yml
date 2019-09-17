@@ -1,0 +1,24 @@
+---
+## This playbook deploys a Spring boot application
+
+# Apply common configuration to all hosts
+- hosts: all
+  become: yes
+  become_method: sudo
+
+  tasks:
+
+    - name: Stop gs-rest-service
+      systemd:
+        name: gs-rest-service
+        state: Stopped
+
+    - copy:
+        src: /target/gs-rest-service-1.0.jar
+        dest: /opt/gs-rest-service/current/gs-rest-service-1.0.jar
+        mode: '0700'
+
+    - name: Start gs-rest-service
+      systemd:
+        name: gs-rest-service
+        state: Started
