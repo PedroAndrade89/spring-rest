@@ -38,6 +38,12 @@
         state: link
         force: yes
 
+    - name: Create /opt/gs-rest-service/current/
+      file:
+        path: /opt/gs-rest-service/current/
+        state: directory
+        mode: '0750'
+
     - name: Create symbolic link from spring app jar file
       file:
         src: /root/spring-rest/target/gs-rest-service-1.0.jar
