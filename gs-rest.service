@@ -1,0 +1,13 @@
+[Unit]
+Description=gs-rest-service
+After=syslog.target
+
+[Service]
+EnvironmentFile=-/etc/default/gs-rest
+WorkingDirectory=/opt/gs-rest-service/current
+User=root
+ExecStart=/usr/bin/java $JAVA_OPTS -Dserver.port=${PORT} -jar $BINARY
+SuccessExitStatus=143
+
+[Install]
+WantedBy=multi-user.target
